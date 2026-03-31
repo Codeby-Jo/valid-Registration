@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Register — NexFlow</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="rigister.css">
+</head>
+<body>
+<div class="wrapper">
+  <!-- Left -->
+  <div class="panel-left">
+    <div class="logo">Nex<span>Flow</span></div>
+    <div class="panel-tagline">
+      <h2>Build <em>faster.</em><br>Ship smarter.</h2>
+      <p>Join thousands of developers who use NexFlow to ship production apps without the headache.</p>
+      <ul class="feature-list">
+        <li>Real-time collaboration tools</li>
+        <li>One-click deployments</li>
+        <li>Built-in CI/CD pipelines</li>
+        <li>99.99% uptime SLA</li>
+      </ul>
+    </div>
+    <p class="already">Already have an account? <a href="index.html">Sign in →</a></p>
+  </div>
+
+  <!-- Right -->
+  <div class="panel-right">
+    <div class="form-header">
+      <h1>Create account</h1>
+      <p>Fill in the details below to get started.</p>
+    </div>
+
+    <form id="regForm" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="fname">First name</label>
+          <input type="text" id="fname" placeholder="Ada"/>
+          <div class="err-msg" id="fname-err">First name is required.</div>
+        </div>
+        <div class="field">
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" placeholder="Lovelace"/>
+          <div class="err-msg" id="lname-err">Last name is required.</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="ada@nexflow.dev"/>
+        <div class="err-msg" id="email-err">Enter a valid email address.</div>
+      </div>
+
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="ada_dev"/>
+        <div class="err-msg" id="username-err">Username must be 3–20 alphanumeric chars.</div>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Min 8 characters"/>
+        <div class="strength-bar">
+          <span id="s1"></span><span id="s2"></span>
+          <span id="s3"></span><span id="s4"></span>
+        </div>
+        <div class="strength-label" id="strength-label"></div>
+        <div class="err-msg" id="password-err">Password must be at least 8 characters.</div>
+      </div>
+
+      <div class="field">
+        <label for="confirm">Confirm password</label>
+        <input type="password" id="confirm" placeholder="Repeat password"/>
+        <div class="err-msg" id="confirm-err">Passwords do not match.</div>
+      </div>
+
+      <div class="checkbox-field">
+        <input type="checkbox" id="terms"/>
+        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+      </div>
+      <div class="err-msg" id="terms-err" style="margin-bottom:.8rem">You must accept the terms.</div>
+
+      <button type="submit" class="btn-submit" id="submitBtn">Create Account</button>
+      <div class="success-msg" id="successMsg">🎉 Account created! Redirecting to login…</div>
+    </form>
+  </div>
+</div>
+
+<script src="register.js"></script>
+</body>
+</html>
